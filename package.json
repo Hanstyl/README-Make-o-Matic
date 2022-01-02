@@ -1,14 +1,22 @@
 {
   "name": "static-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "[How to create a Professional README](./readme-guide.md)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Nathan Nelson",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^6.3.1"
-  }
+    "inquirer": "^8.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hanstyl/README-Make-o-Matic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hanstyl/README-Make-o-Matic/issues"
+  },
+  "homepage": "https://github.com/Hanstyl/README-Make-o-Matic#readme"
 }
