@@ -6,13 +6,12 @@ const { type } = require('os');
 
 // TODO: Create an array of questions for user input
 const questions = [
-
     {
         type: 'input',
-        name: 'github',
+        name: 'githubUser',
         message: 'Please enter your Github user name.',
-        validate: githubInput => {
-            if (githubInput) {
+        validate: githubUserInput => {
+            if (githubUserInput) {
                 return true;
             } else {
                 console.log('You need to enter in you github user name!');
@@ -63,7 +62,25 @@ const questions = [
         type: 'checkbox',
         name: 'license',
         message: 'Select a license',
-        choices: '',
+        choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT', 'Unlicense']
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Add installation instructions for the project'
+    },
+    {
+        type: 'input',
+        name: 'githubRepoUrl',
+        message: 'Link to the Repo',
+        validate: githubRepoUrl => {
+            if (githubRepoUrl) {
+                return true;
+            } else {
+                console.log('Please enter a repo link!');
+                return false;
+            }
+        }
     },
 ];
 
