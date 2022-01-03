@@ -34,7 +34,7 @@ function renderLicenseLink(data) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(data) {
-  
+
   if (data.license === 'Apache License 2.0') {
     return `
 Copyright [${new Date().getFullYear()}] [${data.name}]
@@ -49,7 +49,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
     `
   };
-  
+
   if (data.license === 'GNU GPLv3') {
     return `
 Copyright (C) [${new Date().getFullYear()}] [${data.name}]
@@ -85,7 +85,7 @@ Public License instead of this License.  But first, please read
 [licenses](https://www.gnu.org/licenses/why-not-lgpl.html).
     `
   };
-  
+
   if (data.license === 'MIT') {
     return `
 MIT License
@@ -107,7 +107,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 `
   };
-  
+
   // If theres no license
   if (data.license === 'Unlicense') {
     return '';
@@ -137,6 +137,37 @@ function generateMarkdown(data) {
 
   ${data.installation}
 
+  ## Usage
+
+  ${data.usage}
+
+  ## Credits
+
+  ${data.credits}
+
+  ## License
+
+  ${data.license}
+
+  ## Badges
+
+  ${data.badges}
+
+  ## Features
+
+  ${data.features}
+
+  ## Contributing
+
+  ${data.contributing}
+
+  ## Tests
+
+  ${data.tests}
+
+  ### Contact
+* [Email](mailto:${data.email}) - Email ${data.name} : ${data.email}
+* [GitHub](https://github.com/${data.github}) - GitHub username : ${data.github}
 `;
 }
 
