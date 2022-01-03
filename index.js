@@ -3,56 +3,7 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 
-
-
-// TODO: Create a function to start the app
-function start() {
-    console.log(`
-███████████████████████████
-███████▀▀▀░░░░░░░▀▀▀███████
-████▀░░░░░░░░░░░░░░░░░▀████
-███│░░░░░░░░░░░░░░░░░░░│███
-██▌│░░░░░░░░░░░░░░░░░░░│▐██
-██░└┐░░░░░░░░░░░░░░░░░┌┘░██
-██░░└┐░░░░░░░░░░░░░░░┌┘░░██
-██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██
-██▌░│██████▌░░░▐██████│░▐██
-███░│▐███▀▀░░▄░░▀▀███▌│░███
-██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██
-██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██
-████▄─┘██▌░░░░░░░▐██└─▄████
-█████░░▐█─┬┬┬┬┬┬┬─█▌░░█████
-████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████
-█████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████
-███████▄░░░░░░░░░░░▄███████
-██████████▄▄▄▄▄▄▄██████████
-███████████████████████████
-   █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
-   █░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█
-   █░░║║║╠─║─║─║║║║║╠─░░█
-   █░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█
-   ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-    `);
-
-    return inquirer.prompt([
-        {
-            type: "confirm",
-            name: "start",
-            message: "ReadMe file creator booting up... Would you like to proceed?"
-        }
-    ])
-        .then((answer => {
-            if (answer.start === true) {
-                console.log("Lets-a-go!");
-            } else {
-                console.log("Game Over! Bye");
-                process.exit();
-            }
-        }))
-}
-
-
-
+// these questions need to be added to and edited in order to populate the markdownjs properly
 // TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer.prompt([
@@ -139,17 +90,59 @@ const questions = () => {
 }
 
 
+// TODO: Create a function to start the app
+function init() {
+    console.log(`
+███████████████████████████
+███████▀▀▀░░░░░░░▀▀▀███████
+████▀░░░░░░░░░░░░░░░░░▀████
+███│░░░░░░░░░░░░░░░░░░░│███
+██▌│░░░░░░░░░░░░░░░░░░░│▐██
+██░└┐░░░░░░░░░░░░░░░░░┌┘░██
+██░░└┐░░░░░░░░░░░░░░░┌┘░░██
+██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██
+██▌░│██████▌░░░▐██████│░▐██
+███░│▐███▀▀░░▄░░▀▀███▌│░███
+██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██
+██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██
+████▄─┘██▌░░░░░░░▐██└─▄████
+█████░░▐█─┬┬┬┬┬┬┬─█▌░░█████
+████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████
+█████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████
+███████▄░░░░░░░░░░░▄███████
+██████████▄▄▄▄▄▄▄██████████
+███████████████████████████
+   █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+   █░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█
+   █░░║║║╠─║─║─║║║║║╠─░░█
+   █░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█
+   ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+    `);
 
+    return inquirer.prompt([
+        {
+            type: "confirm",
+            name: "start",
+            message: "ReadMe file creator booting up... Would you like to proceed?"
+        }
+    ])
+        .then((answer => {
+            if (answer.start === true) {
+                console.log("Lets-a-go!");
+            } else {
+                console.log("Game Over! Bye");
+                process.exit();
+            }
+        }))
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    const inputData = generateMarkdown(data)
-    fs.writeFile(fileName, data, (err) => {
-        if (err) { console.log(err) }
-    })
+        .then(questions)
+        .then(userData => {
+            const markdown = generateMarkdown(userData);
+            fs.writeFile('./dist/README.md', markdown, err => {
+                if (err) throw err;
+            });
+        });
 }
-
-
 
 
 
