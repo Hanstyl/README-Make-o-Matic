@@ -1,9 +1,9 @@
-# Humungus Fungus
+# Title
 
   ## Description
   undefined 
 
-  ars
+  bootlicking good fun
 
   ## Table of Contents
 
@@ -14,7 +14,7 @@
 
   ## Installation
 
-  asrdf
+  no
 
   ## Usage
 
@@ -26,7 +26,7 @@
 
   ## License
 
-  
+  Apache License 2.0,GNU GPLv3
 
   ## Badges
 
@@ -45,5 +45,5 @@
   undefined
 
   ### Contact
-* [Email](mailto:asdfgr) - Email undefined : asdfgr
+* [Email](mailto:asdofgjnuirwoin@sodei.com) - Email undefined : asdofgjnuirwoin@sodei.com
 * [GitHub](https://github.com/undefined) - GitHub username : undefined
