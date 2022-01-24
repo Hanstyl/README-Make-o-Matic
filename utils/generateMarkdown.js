@@ -122,7 +122,6 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
   ## Description
-  ${renderLicenseBadge(data)} 
 
   ${data.description}
 
@@ -141,9 +140,11 @@ function generateMarkdown(data) {
 
   ${data.usage}
 
-  ## Credits
+  ![alt text](assets/images/screenshot.png)
 
-  ${data.credits}
+  ## Contributors
+
+  ${data.contributing}
 
   ## License
 
@@ -152,18 +153,6 @@ function generateMarkdown(data) {
   [License](${renderLicenseLink(data)}) - Link to License
 
   ${renderLicenseSection(data)}
-
-  ## Badges
-
-  ${data.badges}
-
-  ## Features
-
-  ${data.features}
-
-  ## Contributing
-
-  ${data.contributing}
 
   ## Tests
 

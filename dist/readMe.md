@@ -1,9 +1,8 @@
-# Title
+# The goats Of GoatingHam
 
   ## Description
-  undefined 
 
-  bootlicking good fun
+  it is a made up application that tracks goats from the make believe land of GoatingHam. Not the be confused with GoatingsBerg
 
   ## Table of Contents
 
@@ -14,36 +13,30 @@
 
   ## Installation
 
-  no
+  npm install install inquirer
 
   ## Usage
 
-  undefined
+  You use it to create a readme. its supposed to be faster
 
-  ## Credits
+  ![alt text](assets/images/screenshot.png)
 
-  undefined
+  ## Contributors
+
+  Nathan Nelson and the U of A bootcamp
 
   ## License
 
-  Apache License 2.0,GNU GPLv3
-
-  ## Badges
-
   undefined
 
-  ## Features
-
-  undefined
-
-  ## Contributing
+  [License](undefined) - Link to License
 
   undefined
 
   ## Tests
 
-  undefined
+  node index.js
 
   ### Contact
-* [Email](mailto:asdofgjnuirwoin@sodei.com) - Email undefined : asdofgjnuirwoin@sodei.com
-* [GitHub](https://github.com/undefined) - GitHub username : undefined
+* [Email](mailto:nathan.nelson042@gmail.com) - Email Nathan Nelson : nathan.nelson042@gmail.com
+* [GitHub](https://github.com/Hanstyl) - GitHub username : Hanstyl
