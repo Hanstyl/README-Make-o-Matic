@@ -52,10 +52,14 @@ const questions = () => {
             }
         },
         { // LICENSE
-            type: 'checkbox',
-            name: 'license',
-            message: 'Select a license',
-            choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT', 'Unlicense']
+            type: "list",
+            name: "license",
+            message: "Choose a License for this project.",
+            choices: [
+                "MIT",
+                "Apache",
+                "GNU GPL v3",
+            ]
         },
         { // CONTRIBUTING
             type: "input",
@@ -164,9 +168,9 @@ function init() {
     ])
         .then((answer => {
             if (answer.start === true) {
-                console.log("Lets-a-go!");
+                console.log("Very Well!");
             } else {
-                console.log("Game Over! Bye");
+                console.log("Game Over!");
                 process.exit();
             }
         }))
