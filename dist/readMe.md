@@ -4,7 +4,7 @@
     
   ## Description
 
-  This application was created in order to help expedite the process of making a professional looking ReadMe file to include in your repos. It is a Node.js application ran from the command prompt. 
+  This is a command line application that prompts for information and accepts user input in order to expedite the creation of a ReamMe file. The ReadMe file generated at the end of the questionnaire will look and read like a professional ReadMe file.
 
   ## Table of Contents
 
@@ -15,17 +15,17 @@
 
   ## Installation
 
-  In order to install this application, please clone the repo, than install the dependencies "Inquirer in Node". Once done, open your projects terminal, run the words "node index" in your command line and follow the prompts.
+  You will need to make sure to have NODE installed. After that, clone the repo and type "npm install" in the terminal. 
 
   ## Usage
 
-  Screen shots will be included here from the assets folder
+  Here is a screenshot showing what the command line application looks like when creating a readme
 
   ![alt text](assets/images/screenshot.png)
 
   ## Contributors
 
-  Nathan Nelson. See below for GitHub info
+  Nathan Nelson - See contact info below // project starter code came from ASU coding bootcamp link to repo - https://github.com/coding-boot-camp/potential-enigma
 
   ## License
 
@@ -55,8 +55,9 @@ SOFTWARE.
 
   ## Tests
 
-  node index.js
+  run "node index.js" in the terminal to start
 
-  ### Contact
+  ## Questions
+  ### Contact Information
 * [Email](mailto:nathan.nelson042@gmail.com) - Email Nathan Nelson : nathan.nelson042@gmail.com
 * [GitHub](https://github.com/Hanstyl) - GitHub username : Hanstyl

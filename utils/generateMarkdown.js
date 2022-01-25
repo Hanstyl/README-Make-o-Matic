@@ -157,7 +157,8 @@ function generateMarkdown(data) {
 
   ${data.tests}
 
-  ### Contact
+  ## Questions
+  ### Contact Information
 * [Email](mailto:${data.email}) - Email ${data.name} : ${data.email}
 * [GitHub](https://github.com/${data.github}) - GitHub username : ${data.github}
 `;

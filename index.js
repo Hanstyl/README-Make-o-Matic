@@ -70,7 +70,7 @@ const questions = () => {
             type: 'input',
             name: 'tests',
             message: 'What command should be run to run tests?',
-            default: 'node index.js'
+            default: 'run "node index.js" in the terminal to start'
         },
         { // GITHUB USERNAME
             type: "input",
