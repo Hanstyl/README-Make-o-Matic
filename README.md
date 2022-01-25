@@ -1,6 +1,6 @@
-# This is a Test readme
-    undefined
-    
+# Professional ReadME Generator
+    N/A
+
   ## Description
 
   Your GitHub profile is an extremely important aspect of your public identity as a developer. A well-crafted one allows you to show off your work to other developers as well as potential employers. An important component of your GitHub profile—and one that many new developers often overlook—is the README.md file.
@@ -18,17 +18,17 @@
 
   ## Usage
 
-  screen shot goes here
+  A screenshot is provided in the assets folder
 
   ![alt text](assets/images/screenshot.png)
 
   ## Contributors
 
-  Nathan Nelson Link to github - https://github.com/
+  Nathan Nelson
 
   ## License
 
-  undefined
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   [License](https://opensource.org/licenses/MIT) - Link to License
 

@@ -1,42 +1,39 @@
 // Creates a function that returns a license badge based on which license is passed in
 function renderLicenseBadge(data) {
+  if (data.license === "MIT") {
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+  } else if (data.license === "Apache") {
+    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+  } else if (data.license === "GNU GPL v3") {
+    return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+  } else {
+    return "N/A";
+  }
+};
 
-  function renderLicenseBadge(license) {
-    let licenseName = license;
-    if (licenseName === "MIT") {
-      return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
-    } else if (licenseName === "Apache") {
-      return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
-    } else if (licenseName === "GNU GPL v3") {
-      return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
-    } else {
-      return "N/A";
-    }
+
+// returns the license link
+function renderLicenseLink(data) {
+  if (data.license === 'Apache License 2.0') {
+    return ('https://www.apache.org/licenses/LICENSE-2.0');
+  };
+  if (data.license === 'GNU GPLv3') {
+    return ('https://www.gnu.org/licenses/gpl-3.0.en.html');
+  };
+  if (data.license === 'MIT') {
+    return ('https://opensource.org/licenses/MIT');
+  };
+  if (data.license === 'Unlicense') {
+    return ('');
   };
 }
 
-  // returns the license link
-  function renderLicenseLink(data) {
-    if (data.license === 'Apache License 2.0') {
-      return ('https://www.apache.org/licenses/LICENSE-2.0');
-    };
-    if (data.license === 'GNU GPLv3') {
-      return ('https://www.gnu.org/licenses/gpl-3.0.en.html');
-    };
-    if (data.license === 'MIT') {
-      return ('https://opensource.org/licenses/MIT');
-    };
-    if (data.license === 'Unlicense') {
-      return ('');
-    };
-  }
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(data) {
 
-  // TODO: Create a function that returns the license section of README
-  // If there is no license, return an empty string
-  function renderLicenseSection(data) {
-
-    if (data.license === 'Apache License 2.0') {
-      return `
+  if (data.license === 'Apache License 2.0') {
+    return `
 Copyright [${new Date().getFullYear()}] [${data.name}]
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -48,10 +45,10 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
     `
-    };
+  };
 
-    if (data.license === 'GNU GPLv3') {
-      return `
+  if (data.license === 'GNU GPLv3') {
+    return `
 Copyright (C) [${new Date().getFullYear()}] [${data.name}]
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -84,10 +81,10 @@ the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 [licenses](https://www.gnu.org/licenses/why-not-lgpl.html).
     `
-    };
+  };
 
-    if (data.license === 'MIT') {
-      return `
+  if (data.license === 'MIT') {
+    return `
 MIT License
 Copyright (c) [${new Date().getFullYear()}] [${data.name}]
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -106,22 +103,22 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 `
-    };
-
-    // If theres no license
-    if (data.license === 'Unlicense') {
-      return '';
-    }
   };
 
+  // If theres no license
+  if (data.license === 'Unlicense') {
+    return '';
+  }
+};
 
 
-  //This is the order of the professional readme example given to us. now fix the questions on index.js
-  // TODO: Create a function to generate markdown for README
-  function generateMarkdown(data) {
-    return `# ${data.title}
+
+//This is the order of the professional readme example given to us. now fix the questions on index.js
+// TODO: Create a function to generate markdown for README
+function generateMarkdown(data) {
+  return `# ${data.title}
     ${renderLicenseBadge(data.license)}
-    
+
   ## Description
 
   ${data.description}
@@ -163,6 +160,6 @@ SOFTWARE.
 * [Email](mailto:${data.email}) - Email ${data.name} : ${data.email}
 * [GitHub](https://github.com/${data.github}) - GitHub username : ${data.github}
 `;
-  }
+}
 
-  module.exports = generateMarkdown;
+module.exports = generateMarkdown;
