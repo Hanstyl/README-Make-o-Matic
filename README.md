@@ -4,7 +4,7 @@
     
   ## Description
 
-  This is a command line application that prompts for information and accepts user input in order to expedite the creation of a ReamMe file. The ReadMe file generated at the end of the questionnaire will look and read like a professional ReadMe file.
+  This is a command line application that prompts for information and accepts user input in order to expedite the creation of a ReadMe file. The ReadMe file generated at the end of the questionnaire will look and read like a professional ReadMe file.
 
   ## Table of Contents
 
