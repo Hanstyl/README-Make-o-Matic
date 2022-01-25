@@ -25,8 +25,8 @@
 
   ## Contributors
 
-  Nathan Nelson - See contact info below 
-  project starter code came from ASU coding bootcamp link to repo - https://github.com/coding-boot-camp/potential-enigma
+  -Nathan Nelson - See contact info below 
+  -project starter code came from ASU coding bootcamp link to repo - https://github.com/coding-boot-camp/potential-enigma
 
   ## License
 
