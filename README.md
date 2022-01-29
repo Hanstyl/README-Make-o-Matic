@@ -22,6 +22,9 @@
   Here is a quick demo as well as the link to a video showing what the command line application looks like when creating a readme
 
   https://user-images.githubusercontent.com/79775889/151653141-42e98627-be56-4544-b358-2303e87c2616.mp4
+  
+  
+  Link to video demonstration - https://watch.screencastify.com/v/dfRpqJa0hvEXURYi0Bmw
 
 
 
