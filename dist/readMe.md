@@ -4,7 +4,7 @@
     
   ## Description
 
-  This is a command line application that prompts for information and accepts user input in order to expedite the creation of a ReamMe file. The ReadMe file generated at the end of the questionnaire will look and read like a professional ReadMe file.
+  This is a command line application that prompts for information and accepts user input in order to expedite the creation of a ReadMe file. The ReadMe file generated at the end of the questionnaire will look and read like a professional ReadMe file.
 
   ## Table of Contents
 
@@ -15,17 +15,17 @@
 
   ## Installation
 
-  You will need to make sure to have NODE installed. After that, clone the repo and type "npm install" in the terminal. 
+  You will need to make sure to have NODE installed. After that, clone the repo and type "npm install" in the terminal.
 
   ## Usage
 
-  Here is a screenshot showing what the command line application looks like when creating a readme
+  Screenshots will be added from the assets/image folder like so.
 
   ![alt text](assets/images/screenshot.png)
 
   ## Contributors
 
-  Nathan Nelson - See contact info below // project starter code came from ASU coding bootcamp link to repo - https://github.com/coding-boot-camp/potential-enigma
+  project starter code came from ASU coding bootcamp link to repo - https://github.com/coding-boot-camp/potential-enigma
 
   ## License
 
